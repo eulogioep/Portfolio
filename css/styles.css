@@ -1,0 +1,30 @@
+/*Lo indicado en html y body hace que sea más sencillo medir los rem
+1rem = 10px*/
+
+/* Los selectores que empiecen por : se les conoce como pseudoselectores.
+Son elementos que no existen en el código html.
+Su utilidad es almacenar los custom properties (variables para css)*/
+
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px;
+}
+.titulo{
+    text-align: center;
+    /* rem es mejor medida para adaptarse a los diferentes tipos de 
+    pantalla.*/
+    font-size: 3.8rem;
+}
+.titulo span{
+    font-size: 2rem;
+}
