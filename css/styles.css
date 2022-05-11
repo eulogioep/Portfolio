@@ -15,6 +15,7 @@ Su utilidad es almacenar los custom properties (variables para css)*/
 
 html{
     font-size: 62.5%;
+    font-family: 'Krub', sans-serif;
 }
 body{
     font-size: 16px;
