@@ -16,16 +16,112 @@ Su utilidad es almacenar los custom properties (variables para css)*/
 html{
     font-size: 62.5%;
     font-family: 'Krub', sans-serif;
+    box-sizing: border-box;
+}
+/*Con esta modificación, ya no afecta el incremento de px
+en css box model. Hay que añadir al selector html la 
+línea: box-sizing: border-box; */
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 body{
     font-size: 16px;
 }
-.titulo{
-    text-align: center;
+h1{
     /* rem es mejor medida para adaptarse a los diferentes tipos de 
     pantalla.*/
     font-size: 3.8rem;
 }
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1,h2,h3{
+    text-align: center;
+}
 .titulo span{
     font-size: 2rem;
+}
+/*Contenedor sirve para centrar el contenido*/
+.contenedor{
+    max-width: 120rem;/*Equivale a 1200px*/
+    margin: 0 auto;
+}
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 60%;
+    text-align: center;
+}
+@media (min-width: 480px) {
+    .boton{
+        width: auto;
+    }
+}
+.nav-bg{
+    background-color: var(--secundario);
+}
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Con @media, hacemos responsive design.
+Indica que si la pantalla es mayor a 768px de ancho
+se aplica esta configuración*/
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.navegacion-principal a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+    
+}
+.imagen-cabecera{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+}
+.contenido-cabecera{
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-color: rgba(0,0,0,0.7);/*Versión más compatible*/
+    background-color: rgb(0 0 0 / 70%);/*Versión más nueva*/
+    width: 100%;
+    height: 100%;
+    /*Centramos el contenido*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenido-cabecera h2, 
+.contenido-cabecera p{
+    color: var(--blanco);
+}
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
 }
