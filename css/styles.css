@@ -18,6 +18,17 @@ Su utilidad es almacenar los custom properties (variables para css)*/
 html{
     font-size: 62.5%;
     box-sizing: border-box;/* Hack para Box Model*/
+    /* Añadir Scroll a la página*/
+    scroll-snap-type: y mandatory;
+}
+
+/** Scroll Snap**/
+
+.titulo,
+.servicios,
+.formulario{
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 /*Con esta modificación, ya no afecta el incremento de px
 en css box model. Hay que añadir al selector html la 
@@ -164,6 +175,7 @@ se aplica esta configuración*/
     display: flex;
     align-items: flex-end;
 }
+
 
 /** Servicios **/
 @media (min-width: 768px) {
