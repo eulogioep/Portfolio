@@ -27,7 +27,7 @@ html{
 .titulo,
 .servicios,
 .formulario{
-    scroll-snap-align: start;
+    scroll-snap-align: center;
     scroll-snap-stop: always;
 }
 /*Con esta modificación, ya no afecta el incremento de px
